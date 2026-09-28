@@ -1,0 +1,51 @@
+/* Thiết lập cơ bản */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header cố định */
+.main-header {
+    position: fixed; /* Đặt header cố định */
+    top: 0; /* Gắn vào cạnh trên của viewport */
+    left: 0; /* Gắn vào cạnh trái của viewport */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex; /* Dùng Flexbox để căn chỉnh nội dung bên trong */
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Đảm bảo header nằm trên các phần tử khác */
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.main-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-header nav ul li {
+    margin-left: 20px;
+}
+
+.main-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Điều chỉnh luồng tài liệu sau header cố định */
+/* Vì header đã thoát khỏi luồng tài liệu, nội dung chính sẽ bị header che mất. */
+/* Chúng ta cần thêm một margin-top cho body hoặc một container chính để đẩy nội dung xuống. */
+body {
+    padding-top: 70px; /* Điều chỉnh giá trị này bằng chiều cao của header */
+}
